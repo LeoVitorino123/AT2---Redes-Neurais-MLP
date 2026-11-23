@@ -1,0 +1,49 @@
+### 1. Metadados do serviço
+GET http://127.0.0.1:8000/info
+User-Agent: Client-Avaliativo
+Accept: application/json
+
+### 2. Passageira com perfil A
+POST http://127.0.0.1:8000/predict
+User-Agent: Client-Avaliativo
+Content-Type: application/json
+
+{
+  "Pclass": 1,
+  "Sex": "female",
+  "Age": 25,
+  "SibSp": 0,
+  "Parch": 0,
+  "Fare": 80,
+  "Embarked": "S"
+}
+
+### 3. Passageiro com perfil B
+POST http://127.0.0.1:8000/predict
+User-Agent: Client-Avaliativo
+Content-Type: application/json
+
+{
+  "Pclass": 3,
+  "Sex": "male",
+  "Age": 40,
+  "SibSp": 1,
+  "Parch": 0,
+  "Fare": 7.25,
+  "Embarked": "S"
+}
+
+### 4. Requisição inválida: idade deve ser numérica
+POST http://127.0.0.1:8000/predict
+User-Agent: Client-Avaliativo
+Content-Type: application/json
+
+{
+  "Pclass": 3,
+  "Sex": "male",
+  "Age": "idade inválida",
+  "SibSp": 1,
+  "Parch": 0,
+  "Fare": 7.25,
+  "Embarked": "S"
+}

@@ -1,0 +1,4 @@
+Baixe o arquivo train.csv nesta página:
+https://www.kaggle.com/competitions/titanic/data
+
+Depois, coloque o arquivo nesta pasta.
